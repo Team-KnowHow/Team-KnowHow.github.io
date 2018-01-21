@@ -16,7 +16,8 @@ html {
 }
 
 body {
-    margin: 0
+    margin: 0;
+    overflow-x: hidden;
 }
 
 article,
@@ -3985,7 +3986,7 @@ tbody.collapse.in {
 }
 
 .navbar-collapse {
-    overflow-x: visible;
+    overflow-x: hidden;
     padding-right: 15px;
     padding-left: 15px;
     border-top: 1px solid transparent;
@@ -4076,7 +4077,7 @@ tbody.collapse.in {
     position: fixed;
     right: 0;
     left: 0;
-    z-index: 1030
+    z-index: 1000;
 }
 
 @media (min-width:768px) {
@@ -5453,7 +5454,7 @@ button.close {
 
 .background-image-container {
     text-align: center;
-    background-image: url(./assets/images/wave-hero-background.svg)
+    background-image: url(./assets/images/wave-hero-background.svg);
 }
 
 .background-image-container,
@@ -5527,10 +5528,10 @@ button.close {
     -o-transition: all .5s linear;
     transition: all .5s linear;
     background-image: url(./assets/images/wave-header.svg);
-    background-position: 0 90%;
-    background-repeat: no-repeat;
+    background-position: 0 100%;
     background-size: cover;
-    padding-bottom: 30px
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
 }
 
 @media (max-width:768px) {
@@ -5888,4 +5889,311 @@ label {
     line-height: 1.1;
     font-size: 20px;
     color: #FA751E;
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+body .particletext {
+    text-align: center;
+    font-size: 48px;
+    position: relative;
+}
+
+body .particletext.confetti > .particle {
+    opacity: 0;
+    position: absolute;
+    -webkit-animation: confetti 3s ease-in infinite;
+    animation: confetti 3s ease-in infinite;
+}
+
+body .particletext.confetti > .particle.c1 {
+    background-color: rgba(47, 127, 200, 1);
+}
+
+body .particletext.confetti > .particle.c2 {
+    background-color: rgba(250, 239, 71, 1);
+}
+
+hr.style-eight {
+    overflow: visible;
+    opacity: 0.3;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+
+}
+
+@-webkit-keyframes confetti {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0%) rotate(0deg);
+        transform: translateY(0%) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    35% {
+        -webkit-transform: translateY(-800%) rotate(270deg);
+        transform: translateY(-800%) rotate(270deg);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(2000%) rotate(1440deg);
+        transform: translateY(2000%) rotate(1440deg);
+    }
+}
+
+@keyframes confetti {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(0%) rotate(0deg);
+        transform: translateY(0%) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    35% {
+        -webkit-transform: translateY(-800%) rotate(270deg);
+        transform: translateY(-800%) rotate(270deg);
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(2000%) rotate(1440deg);
+        transform: translateY(2000%) rotate(1440deg);
+    }
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+#particle-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+.svg-wrapper {
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+}
+
+.shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: #fff;
+    ;
+}
+
+.text2 {
+    font-family: Calibri;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 30px;
+    color: #fff;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 540;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+.svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+html,
+body {
+    color: #fff;
+
+}
+
+
+.countdown {
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.countdown.style-1 div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.countdown.style-1 div span {
+    display: block;
+}
+
+.countdown div {
+    font-size: 6rem;
+    font-weight: 500;
+    display: inline-block;
+    font-family: Calibri;
+}
+
+.countdown div span {
+    font-weight: 300;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: Calibri
+}
+
+
+
+
+
+
+/*
+--------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+*/
+
+adding: 0 1rem;
+}
+
+.section {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+
+.transition {
+    height: 20vh;
+}
+
+.transition-1 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#037ed2), to(#0ca2bb));
+    background: linear-gradient(#037ed2, #0ca2bb);
+}
+
+.transition-2 {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0ca2bb), to(#037ed2));
+    background: linear-gradient(#0ca2bb, #037ed2);
 }

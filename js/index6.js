@@ -25,7 +25,7 @@ $(function () {
         if (currentDate < endDate) {
 
 
-            endDate = 1517241600000;
+            endDate = 1517194800000;
             var time = endDate - currentDate;
 
             var seconds = Math.floor(time / 1000 % 60);
